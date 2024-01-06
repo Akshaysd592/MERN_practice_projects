@@ -1,7 +1,7 @@
 // db function and server start
 import express from 'express'
 const app = express();
-// import todorouter from './routes/todo.routes.js'
+import todorouter from './routes/todo.routes.js'
 import cors from 'cors'
 import dotenv, { parse } from 'dotenv'
 dotenv.config({
@@ -20,7 +20,7 @@ app.use(cors({
 
 
 
-// app.use('/api/v1/todo',todorouter);
+app.use('/api/v1/todo',todorouter);
 
 
 import dbConnect from './db/index.js'

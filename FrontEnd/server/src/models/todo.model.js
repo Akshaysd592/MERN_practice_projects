@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 
 const todoSchema = new mongoose.Schema({
-    Title:{
+    title:{
         type:String,
         required:true,
         index:true
@@ -15,10 +15,13 @@ const todoSchema = new mongoose.Schema({
         type:String,
     },
     owner:{
-        type:String,
-        required:true
+         type:String
     }
 
-})
+},
+{
+    timestamps:true
+}
+)
 
-export const Todo =  mongoose.model("User", todoSchema);
+export const Todo =  mongoose.model("Todo", todoSchema);
