@@ -6,6 +6,8 @@ import ErrorPage from './pages/ErrorPage'
 import UpdateTodo from './pages/UpdateTodo'
 import DeleteTodo from './pages/DeleteTodo'
 import GetTodo from './pages/GetTodo'
+import Content from './pages/Content'
+import {Toaster} from 'react-hot-toast'
 
 function App() {
      
@@ -15,6 +17,10 @@ function App() {
         element: <Home/>,// declare header and footer and in middler outlet component coming from react-router-dom to render childen
         errorElement:<ErrorPage/>,
         children:[
+          {
+              path:"",
+              element:<Content/>
+          },
           {
             path:'createtodo',
             element:<CreateTodo/>
@@ -39,6 +45,7 @@ function App() {
   return (
       <>
        <RouterProvider router={router}/>
+       <Toaster/>
       </>
   )
 }
