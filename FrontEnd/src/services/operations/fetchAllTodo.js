@@ -22,7 +22,7 @@ export const fetchAllTodos = async()=>{
 
     } catch (error) {
          console.log("Error occured while fetching all todos.... ")
-         toast.error("Error in getting all todos ")
+        //  toast.error("Error in getting all todos ")
 
     }
 

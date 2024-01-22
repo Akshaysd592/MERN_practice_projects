@@ -8,7 +8,7 @@ import { getAllTodos } from '../controllers/getAllTodos.controller.js';
 
 const router = Router();
 
-router.route("/create-todo").post(createTodo);
+router.route("/createtodo").post(createTodo);
 router.route("/update-todo/:id").put(updateTodo);
 router.route("/delete-todo/:id").delete(deleteTodo);
 router.route("/get-todo/:id").get(getTodo);

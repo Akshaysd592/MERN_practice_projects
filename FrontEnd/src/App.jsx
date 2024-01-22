@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import {BrowserRouter, RouterProvider, createBrowserRouter} from 'react-router-dom'
 import { Home } from './pages/Home'
-import CreateTodo from './components/Todocomponents/CreateTodo'
+
 import ErrorPage from './pages/ErrorPage'
 import UpdateTodo from './pages/UpdateTodo'
 import DeleteTodo from './pages/DeleteTodo'
 import GetTodo from './pages/GetTodo'
 import Content from './pages/Content'
 import {Toaster} from 'react-hot-toast'
+import VideoPlayer from './pages/VideoPlayer'
+import CreateTodo from './pages/CreateTodo'
 
 function App() {
      
@@ -22,8 +24,12 @@ function App() {
               element:<Content/>
           },
           {
-            path:'createtodo',
+            path:"createtodo",
             element:<CreateTodo/>
+          },
+          {
+            path:'create-todo',
+            element:<VideoPlayer/>
           },  
           {
             path:"updatetodo/:id",

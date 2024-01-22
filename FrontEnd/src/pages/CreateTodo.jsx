@@ -1,8 +1,10 @@
 import React from 'react'
+import CreateTodoCom from '../components/Todocomponents/CreateTodoCom'
+
 
 const CreateTodo = () => {
   return (
-    <div>CreateTodo</div>
+    <div><CreateTodoCom/></div>
   )
 }
 

@@ -11,13 +11,13 @@ const createTodo =  asyncHandler(async(req,res)=>{
         // validate is empty or not
         // using create function to make db entry
         // return response using apiResponse object
-
+        
         const {title,description,body,owner} = req.body;
     
-        
-        if(!title || !description || !body || !owner ){
-            throw new apiError(400,"All fields are required");
-        }
+         console.log("data obtained is ", title);
+        // if(!title || !description || !body  ){
+        //     throw new apiError(400,"All fields are required");
+        // }
 
         // if(
         //     [title.description,body,author].some((field)=> field?.trim() === "")
